@@ -642,6 +642,25 @@
     </div>
   </footer>
 
+  <!-- OpenPanel analytics (self-hosted, cookie-free) -->
+  <script>
+    window.op = window.op || function () {
+      var n = []
+      return new Proxy(function () { arguments.length && n.push([].slice.call(arguments)) }, {
+        get: function (t, r) { return r === 'q' ? n : function () { n.push([r].concat([].slice.call(arguments))) } },
+        has: function (t, r) { return r === 'q' }
+      })
+    }()
+    window.op('init', {
+      clientId: '21a4d269-94f9-4a37-9824-fc638a82a599',
+      apiUrl: 'https://stats.ceman.cc/api',
+      trackScreenViews: true,
+      trackOutgoingLinks: true,
+      trackAttributes: true
+    })
+  </script>
+  <script src="assets/openpanel.js" async defer></script>
+
   <script src="main.js" defer></script>
 </body>
 </html>

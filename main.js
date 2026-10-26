@@ -1,4 +1,24 @@
-// Nav background on scroll, mobile menu, scroll reveals and the card spotlight.
+// Nav background on scroll, mobile menu, scroll reveals, the card spotlight and analytics events.
+
+// Safe wrapper: window.op is a queue stub until assets/openpanel.js loads.
+const track = (name, properties) => {
+  try { window.op && window.op('track', name, properties) } catch (_) {}
+}
+
+// Every Chrome Web Store link is a conversion; record where it was clicked.
+document.querySelectorAll('a[href*="chromewebstore.google.com"]').forEach((link) => {
+  link.addEventListener('click', () => {
+    const section = link.closest('section[id]')?.id
+      || (link.closest('nav') ? 'nav' : link.closest('footer') ? 'footer' : 'page')
+    track('install_click', { placement: section, label: (link.textContent || '').trim().slice(0, 60) })
+  })
+})
+
+document.querySelectorAll('#nav-links a, .footer-links a').forEach((link) => {
+  link.addEventListener('click', () => {
+    track('nav_click', { label: (link.textContent || '').trim().slice(0, 60), href: link.getAttribute('href') })
+  })
+})
 
 const nav = document.getElementById('nav')
 const toggle = document.getElementById('nav-toggle')
