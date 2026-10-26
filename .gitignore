@@ -1,0 +1,5 @@
+# not part of the published site
+chrome-web-store/
+tools/
+.DS_Store
+Thumbs.db

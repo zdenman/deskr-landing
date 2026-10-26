@@ -1,0 +1,11 @@
+{
+  "name": "Deskr – New Tab Desktop",
+  "short_name": "Deskr",
+  "icons": [
+    { "src": "assets/icon-128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "assets/icon.png", "sizes": "512x512", "type": "image/png" }
+  ],
+  "theme_color": "#0b0e13",
+  "background_color": "#0b0e13",
+  "display": "browser"
+}

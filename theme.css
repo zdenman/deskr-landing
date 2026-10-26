@@ -1,0 +1,38 @@
+/* Deskr landing page — dark theme. Accent taken from the cyan cross in the extension icon. */
+:root {
+  --background: oklch(0.145 0.008 250);
+  --background-elevated: oklch(0.18 0.01 250);
+  --foreground: oklch(0.97 0.004 250);
+  --card: oklch(0.19 0.01 250);
+  --card-foreground: oklch(0.97 0.004 250);
+  --muted: oklch(0.24 0.012 250);
+  --muted-foreground: oklch(0.70 0.015 250);
+  --subtle-foreground: oklch(0.55 0.015 250);
+  --primary: oklch(0.84 0.13 205);
+  --primary-strong: oklch(0.76 0.14 215);
+  --primary-foreground: oklch(0.16 0.02 230);
+  --primary-glow: oklch(0.84 0.13 205 / 0.18);
+  --accent: oklch(0.84 0.13 205 / 0.10);
+  --accent-foreground: oklch(0.90 0.10 205);
+  --border: oklch(1 0 0 / 0.08);
+  --border-strong: oklch(1 0 0 / 0.14);
+  --ring: oklch(0.84 0.13 205 / 0.55);
+  --destructive: oklch(0.65 0.21 25);
+
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, SFMono-Regular, Consolas, monospace;
+
+  --radius-sm: 0.5rem;
+  --radius: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --shadow-sm: 0 1px 2px hsl(220 40% 2% / 0.4);
+  --shadow: 0 8px 24px -8px hsl(220 40% 2% / 0.6), 0 1px 0 0 oklch(1 0 0 / 0.04) inset;
+  --shadow-lg: 0 30px 80px -20px hsl(220 40% 2% / 0.8), 0 0 0 1px oklch(1 0 0 / 0.06);
+  --shadow-glow: 0 0 0 1px oklch(0.84 0.13 205 / 0.25), 0 10px 40px -10px oklch(0.84 0.13 205 / 0.45);
+
+  --spacing: 0.25rem;
+  --container: 72rem;
+  --tracking-tight: -0.025em;
+}

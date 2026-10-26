@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deskr – New Tab Page for Chrome with Shortcuts, RSS &amp; Widgets</title>
+  <meta name="description" content="Deskr replaces Chrome's new tab with a desktop for your shortcuts, folders, RSS feeds, tasks, clock and weather. Syncs through Chrome Sync, no account needed.">
+  <link rel="canonical" href="https://deskr.cc/">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#0b0e13">
+  <meta name="color-scheme" content="dark">
+  <style>html{background:#0b0e13;color:#f3f5f8}</style>
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Deskr">
+  <meta property="og:title" content="Deskr – Your new tab, organized">
+  <meta property="og:description" content="Shortcuts, folders, RSS feeds, tasks and widgets on Chrome's new tab page. Syncs through Chrome Sync, no account needed.">
+  <meta property="og:url" content="https://deskr.cc/">
+  <meta property="og:image" content="https://deskr.cc/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="The Deskr new tab page with shortcuts, weather and a clock over a mountain background">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deskr – Your new tab, organized">
+  <meta name="twitter:description" content="Shortcuts, folders, RSS feeds, tasks and widgets on Chrome's new tab page.">
+  <meta name="twitter:image" content="https://deskr.cc/assets/og-image.jpg">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
+  <link rel="manifest" href="site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
+  <link rel="preload" as="image" href="assets/screens/desktop-freeform.webp" fetchpriority="high">
+  <link rel="stylesheet" href="theme.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script>document.documentElement.classList.add('js')</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://deskr.cc/#website",
+        "url": "https://deskr.cc/",
+        "name": "Deskr",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://deskr.cc/#webpage",
+        "url": "https://deskr.cc/",
+        "name": "Deskr – New Tab Page for Chrome with Shortcuts, RSS & Widgets",
+        "isPartOf": { "@id": "https://deskr.cc/#website" },
+        "about": { "@id": "https://deskr.cc/#app" },
+        "mentions": { "@id": "https://taskr.cc/#app" },
+        "inLanguage": "en"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://taskr.cc/#app",
+        "name": "Taskr",
+        "url": "https://taskr.cc/",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Task manager",
+        "operatingSystem": "Web, Android",
+        "description": "A task manager with countdown timers on every deadline, drag-and-drop lists, recurring tasks, time tracking, markdown notes, workspaces and a REST API with an MCP server.",
+        "screenshot": "https://deskr.cc/assets/screens/taskr-board.webp"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://deskr.cc/#app",
+        "name": "Deskr – New Tab Desktop",
+        "applicationCategory": "BrowserApplication",
+        "applicationSubCategory": "New tab page",
+        "operatingSystem": "Chrome",
+        "softwareVersion": "0.6.0",
+        "url": "https://deskr.cc/",
+        "downloadUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
+        "installUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
+        "image": "https://deskr.cc/assets/og-image.jpg",
+        "screenshot": [
+          "https://deskr.cc/assets/screens/desktop-freeform.webp",
+          "https://deskr.cc/assets/screens/rss-youtube.webp",
+          "https://deskr.cc/assets/screens/search-numbers.webp"
+        ],
+        "description": "A Chrome extension that replaces the new tab page with a desktop of your shortcuts, folders, RSS feeds, Taskr tasks and widgets. Everything syncs through Chrome Sync, with no account or server of its own.",
+        "featureList": [
+          "Grid or freeform desktop of shortcuts",
+          "Folders with custom icons or content previews",
+          "Icons from favicons, dashboard-icons, tiles, uploads or URLs",
+          "Import from Chrome bookmarks",
+          "Quick search of shortcuts, folders and bookmarks",
+          "Top nine shortcuts opened with number keys",
+          "Address bar keyword (dk) to open shortcuts from any tab",
+          "RSS and Atom reader with YouTube and Twitch support",
+          "Taskr task manager in a tab: to-do lists, countdown deadlines, subtasks, calendar and time tracking",
+          "Clock, date and weather widgets",
+          "Pomodoro and countdown timer",
+          "Custom and Unsplash backgrounds",
+          "Profiles",
+          "Broken link checker",
+          "Sync through Chrome Sync"
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://deskr.cc/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Do I need an account to use Deskr?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Deskr has no account and no server of its own. Your shortcuts, feeds, profiles and settings are stored in Chrome and sync through Chrome Sync. A Taskr account is only needed if you want to use the Taskr tab." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Deskr sync between my computers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shortcuts, folders, RSS feeds, profiles and settings sync through Chrome Sync to every computer where you are signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it." }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I import my Chrome bookmarks?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can import single bookmarks or whole bookmark folders as shortcuts, and quick search also finds your Chrome bookmarks." }
+          },
+          {
+            "@type": "Question",
+            "name": "Which feeds does the RSS reader support?",
+            "acceptedAnswer": { "@type": "Answer", "text": "RSS and Atom feeds, including YouTube channels and Twitch. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many new articles there are." }
+          },
+          {
+            "@type": "Question",
+            "name": "Why does Deskr ask for permissions?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Each permission backs a feature: bookmarks for import and search, storage for saving and syncing, alarms for background feed checks, search for web search, context menus for Add page to Deskr, and identity for Google Drive and Taskr sign-in. Most visited sites and access to feed sites are optional and asked for only when you use them." }
+          },
+          {
+            "@type": "Question",
+            "name": "What is Taskr, and do I need it to use Deskr?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Taskr (taskr.cc) is our task manager with countdown timers on every deadline, drag-and-drop lists, recurring tasks, time tracking and notes. Deskr shows it in its own tab once you sign in or create a free account. It's optional: Deskr works fully without it, and you can turn the Taskr tab off in Settings." }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Deskr work in Edge, Brave or other Chromium browsers?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Deskr is built for Google Chrome. Chromium-based browsers that install extensions from the Chrome Web Store can usually run it, but Chrome Sync is only available in Chrome." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Lucide icons (ISC), inlined as a sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-arrow-down" viewBox="0 0 24 24"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></symbol>
+    <symbol id="i-chrome" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4"/><path d="M21.17 8H12"/><path d="M3.95 6.06 8.54 14"/><path d="M10.88 21.94 15.46 14"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-rss" viewBox="0 0 24 24"><path d="M4 11a9 9 0 0 1 9 9"/><path d="M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></symbol>
+    <symbol id="i-tasks" viewBox="0 0 24 24"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-sync" viewBox="0 0 24 24"><path d="M21 12a9 9 0 0 0-9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/><path d="M3 12a9 9 0 0 0 9 9 9.75 9.75 0 0 0 6.74-2.74L21 16"/><path d="M16 16h5v5"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></symbol>
+    <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.09-3.09a2 2 0 0 0-2.82 0L6 21"/></symbol>
+    <symbol id="i-bookmark" viewBox="0 0 24 24"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-server" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="6 3 20 12 6 21 6 3"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="Deskr home">
+        <img src="assets/icon-128.png" alt="" width="28" height="28">
+        Deskr
+      </a>
+      <nav aria-label="Main">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#rss">RSS</a></li>
+          <li><a href="#taskr">Taskr</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a class="btn btn-primary btn-sm" href="https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe" rel="noopener">
+          <svg class="icon" aria-hidden="true"><use href="#i-chrome"/></svg>
+          Add to Chrome
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="container">
+        <span class="badge"><b>New</b> RSS categories and a redesigned reader</span>
+        <h1>Your new tab, <span class="gradient-text">organized.</span></h1>
+        <p class="hero-sub">Deskr turns Chrome's new tab page into a desktop for your shortcuts, RSS feeds, tasks and widgets. It syncs through Chrome Sync, with no account and no server.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe" rel="noopener">
+            <svg class="icon" aria-hidden="true"><use href="#i-chrome"/></svg>
+            Add to Chrome
+          </a>
+          <a class="btn btn-ghost btn-lg" href="#features">
+            See the features
+            <svg class="icon" aria-hidden="true"><use href="#i-arrow-down"/></svg>
+          </a>
+        </div>
+        <p class="hero-note">For Google Chrome · Takes under a minute to set up</p>
+
+        <div class="hero-shot">
+          <div class="hero-glow" aria-hidden="true"></div>
+          <div class="frame">
+            <div class="frame-bar" aria-hidden="true">
+              <div class="frame-dots"><i></i><i></i><i></i></div>
+              <div class="frame-url">New Tab</div>
+              <div class="frame-spacer"></div>
+            </div>
+            <img src="assets/screens/desktop-freeform.webp" width="2400" height="1500" fetchpriority="high"
+                 alt="Deskr new tab page: shortcut icons arranged freely like a computer desktop, with work apps and a Dev folder on the left and media apps and a Social folder on the right, weather for Bratislava and a large clock over a mountain background">
+          </div>
+        </div>
+
+        <ul class="trust" aria-label="Highlights">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No account</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>No server of its own</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Syncs through Chrome Sync</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>Keyboard first</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Features</span>
+          <h2 id="features-title">Everything you open a tab for, in one place</h2>
+          <p>Deskr keeps the sites you use, the news you follow and the work you have to do one keystroke away, every time you open a new tab.</p>
+        </div>
+
+        <div class="bento">
+          <article class="card span-4 reveal">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg></div>
+            <h3>A desktop of shortcuts</h3>
+            <p>Lay icons out in a tidy grid, or switch to freeform and put each one exactly where you want it. Groups keep their spacing when the window changes size.</p>
+            <div class="card-media">
+              <img src="assets/screens/folder.webp" width="1400" height="595" loading="lazy" decoding="async"
+                   alt="An open Deskr folder named Dev containing Vercel, Cloudflare, Docker Hub and Stack Overflow shortcuts">
+            </div>
+          </article>
+          <article class="card span-2 reveal" style="--delay:70ms">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg></div>
+            <h3>Your top nine, one key away</h3>
+            <p>Press <kbd>/</kbd> for your favourite shortcuts, numbered. Press <kbd>1</kbd>–<kbd>9</kbd> and you're there. Or type to search shortcuts, bookmarks and the web.</p>
+            <div class="mini-search" aria-hidden="true">
+              <div class="mini-input"><svg class="icon"><use href="#i-search"/></svg><span class="caret"></span></div>
+              <div class="mini-result"><span class="mini-dot"></span><span><b>GitHub</b></span><kbd>1</kbd></div>
+              <div class="mini-result"><span class="mini-dot"></span><span><b>Gmail</b></span><kbd>2</kbd></div>
+              <div class="mini-result is-active"><span class="mini-dot"></span><span><b>YouTube</b></span><kbd>3</kbd></div>
+              <div class="mini-result"><span class="mini-dot"></span><span><b>Notion</b></span><kbd>4</kbd></div>
+              <div class="mini-keys"><kbd>/</kbd><span>then</span><kbd>1</kbd><span>–</span><kbd>9</kbd></div>
+            </div>
+          </article>
+          <article class="card span-2 reveal">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg></div>
+            <h3>RSS reader</h3>
+            <p>RSS and Atom feeds, YouTube channels and Twitch, sorted into categories and checked in the background.</p>
+          </article>
+          <article class="card span-2 reveal" style="--delay:70ms">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-tasks"/></svg></div>
+            <h3>Tasks &amp; deadlines</h3>
+            <p>A Taskr tab with your to-do lists, countdown deadlines, subtasks and time tracking, synced live.</p>
+          </article>
+          <article class="card span-2 reveal" style="--delay:140ms">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></div>
+            <h3>Clock &amp; weather</h3>
+            <p>A clock and date in the format you like, and the forecast for your city from MET Norway.</p>
+          </article>
+          <article class="card span-2 reveal">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
+            <h3>Profiles</h3>
+            <p>Separate desktops for work and home, each with its own shortcuts and feeds.</p>
+          </article>
+          <article class="card span-2 reveal" style="--delay:70ms">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-link"/></svg></div>
+            <h3>Broken link check</h3>
+            <p>Find shortcuts to pages that are gone or have moved, right from the desktop menu.</p>
+          </article>
+          <article class="card span-2 reveal" style="--delay:140ms">
+            <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-sync"/></svg></div>
+            <h3>Synced everywhere</h3>
+            <p>Shortcuts, feeds, profiles and settings follow you to every computer through Chrome Sync.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature details -->
+    <section class="section section-alt" aria-label="Feature details">
+      <div class="container">
+
+        <article class="feature" id="shortcuts">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Shortcuts &amp; folders</span>
+            <h2>Shortcuts and folders, arranged your way</h2>
+            <p>Build the start page you actually want. Pin the sites you use every day, group the rest into folders and give everything an icon you'll recognise at a glance.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Grid or freeform.</strong> Snap icons to a grid, or drag them anywhere and they stay put.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Folders.</strong> Drag shortcuts onto a folder; give it a custom icon or a preview of what's inside.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Icons your way.</strong> The site's favicon, a matching icon from dashboard-icons, a coloured letter or emoji tile, an upload or any image URL.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Import from Chrome.</strong> Bring in single bookmarks or whole bookmark folders, or start from your most visited sites.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Links and files.</strong> A shortcut can open a web address or a local file path.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-right">
+            <div class="frame">
+              <img src="assets/screens/add-shortcut.webp" width="1100" height="1042" loading="lazy" decoding="async"
+                   alt="The Add Shortcut dialog with title and URL fields, an option to import Chrome bookmarks, and icon sources: Auto, Library, Tile, Upload and URL">
+            </div>
+          </div>
+        </article>
+
+        <article class="feature reverse" id="search">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Quick search</span>
+            <h2>Your top nine shortcuts, one keystroke away</h2>
+            <p>The fastest way to open a site: press <kbd>/</kbd> on a new tab and your favourite shortcuts appear, numbered. Press the number and you're there. No mouse, no typing.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong><kbd>/</kbd> then <kbd>1</kbd>–<kbd>9</kbd>.</strong> Open one of your top nine shortcuts or folders. Add <kbd>Shift</kbd> to open it in a new tab.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>You pick the nine.</strong> Reorder them, or hide ones you don't want there, in Settings.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Or just start typing.</strong> Deskr searches your shortcuts, folders and Chrome bookmarks as you type, and falls back to a web search with your default engine.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Save any page</strong> with right-click → <em>Add page to Deskr</em>, or <kbd>Alt</kbd> <kbd>Shift</kbd> <kbd>D</kbd>.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-left">
+            <div class="frame">
+              <img src="assets/screens/search-numbers.webp" width="1100" height="1035" loading="lazy" decoding="async"
+                   alt="Deskr quick search opened with the slash key, listing nine numbered shortcuts: GitHub, Gmail, YouTube, Notion, ChatGPT, Figma, a Dev folder, Spotify and Google Drive">
+            </div>
+          </div>
+        </article>
+
+        <article class="feature" id="address-bar">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Address bar</span>
+            <h2>Open any shortcut straight from the address bar</h2>
+            <p>You don't even need a new tab. Click the address bar, type <kbd>dk</kbd> and a space, then the first letters of a shortcut's name. Deskr suggests matching shortcuts as you type; press <kbd>Enter</kbd> to open the best one.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Works everywhere in Chrome,</strong> from any tab, with <kbd>Ctrl</kbd> <kbd>L</kbd> to jump to the address bar.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Finds shortcuts inside folders</strong> too, and shows which folder each one is in.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>No match?</strong> <kbd>Enter</kbd> searches the web for what you typed.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-right">
+            <div class="omni" role="img" aria-label="Chrome address bar in Deskr keyword mode after typing dk and g, suggesting GitHub, Gmail, Google Drive, Figma and Instagram from the Social folder">
+              <div class="omni-bar" aria-hidden="true">
+                <svg class="icon omni-search"><use href="#i-search"/></svg>
+                <span class="omni-chip"><img src="assets/icon-128.png" alt="" width="16" height="16">Deskr – New Tab Desktop</span>
+                <span class="omni-text">g<span class="caret"></span></span>
+              </div>
+              <ul class="omni-list" aria-hidden="true">
+                <li class="is-active"><img src="assets/icon-128.png" alt="" width="16" height="16"><span><b>GitHub</b> <i>github.com</i></span></li>
+                <li><img src="assets/icon-128.png" alt="" width="16" height="16"><span><b>Gmail</b> <i>mail.google.com</i></span></li>
+                <li><img src="assets/icon-128.png" alt="" width="16" height="16"><span><b>Google Drive</b> <i>drive.google.com</i></span></li>
+                <li><img src="assets/icon-128.png" alt="" width="16" height="16"><span><b>Figma</b> <i>figma.com</i></span></li>
+                <li><img src="assets/icon-128.png" alt="" width="16" height="16"><span><b>Instagram</b> <i>instagram.com · Social</i></span></li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature reverse" id="rss">
+          <div class="feature-text reveal">
+            <span class="eyebrow">RSS reader</span>
+            <h2>An RSS reader in every new tab</h2>
+            <p>Follow blogs, news sites and creators without another app. Deskr fetches your feeds directly from their sites and shows new articles and videos the moment you open a tab.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>RSS, Atom, YouTube and Twitch.</strong> Paste a site, feed or channel and you're done.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Categories.</strong> Sort feeds into colour-coded categories and switch between them with one click.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Three views.</strong> A compact list, a list with images, or cards with the real video thumbnails.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Background checks.</strong> Feeds refresh every 30 minutes and the toolbar icon shows how many new articles are waiting.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-left">
+            <div class="stack">
+              <div class="frame">
+                <img src="assets/screens/rss-youtube.webp" width="2000" height="958" loading="lazy" decoding="async"
+                     alt="Deskr RSS reader showing the YouTube category as cards with video thumbnails from Fireship and Marques Brownlee">
+              </div>
+              <div class="frame">
+                <img src="assets/screens/rss.webp" width="2000" height="958" loading="lazy" decoding="async"
+                     alt="Deskr RSS reader showing all categories with article cards from Engadget and Hacker News">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature" id="taskr">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Built-in task manager</span>
+            <h2>Your to-do list and deadlines, in every new tab</h2>
+            <p>Deskr comes with a tab for <a class="text-link" href="https://taskr.cc" rel="noopener">Taskr</a>, our task manager with countdown deadlines. Sign in or create a free account, and the real Taskr app opens right next to your shortcuts: the same lists, tasks and timers, changes synced live in both directions.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>The whole app, not a widget.</strong> Lists, tasks, subtasks, notes and the calendar work exactly as on taskr.cc, in Deskr's colours.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Deadlines you can't miss.</strong> Every due date counts down in days, hours and minutes and turns amber, then red, as it gets close.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Secure sign-in.</strong> You sign in on Taskr's own page; Deskr never sees your password, and you can sign out any time.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Optional.</strong> Don't need a task manager? Turn the tab off in Settings and Deskr stays a pure new tab page.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-right">
+            <div class="stack">
+              <div class="frame">
+                <img src="assets/screens/taskr-board.webp" width="2000" height="986" loading="lazy" decoding="async"
+                     alt="The Taskr tab in Deskr showing a Product launch workspace with This week, Marketing and Design lists, task countdowns such as 7h 56m and 1d 4h, subtask progress and a running time tracker">
+              </div>
+              <div class="frame">
+                <img src="assets/screens/taskr-calendar.webp" width="2000" height="986" loading="lazy" decoding="async"
+                     alt="Taskr's week calendar inside Deskr with timed tasks from Monday to Friday">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="taskr-more reveal" aria-labelledby="taskr-features-title">
+          <h3 id="taskr-features-title">What Taskr can do</h3>
+          <ul class="taskr-grid">
+            <li><a href="https://taskr.cc/features/countdown-timers" rel="noopener"><strong>Countdown timers</strong><span>Due dates count down live, colour-coded by urgency, on tasks or whole lists.</span></a></li>
+            <li><a href="https://taskr.cc/features/drag-and-drop-lists" rel="noopener"><strong>Drag-and-drop lists</strong><span>As many lists as you need; reorder tasks and lists by dragging.</span></a></li>
+            <li><a href="https://taskr.cc/features/recurring-tasks" rel="noopener"><strong>Recurring tasks</strong><span>Daily, on chosen weekdays or every N days; the next one is scheduled for you.</span></a></li>
+            <li><a href="https://taskr.cc/features/time-tracking" rel="noopener"><strong>Time tracking</strong><span>Start a timer on any task and see time per task, list and workspace.</span></a></li>
+            <li><a href="https://taskr.cc/features/markdown-notes" rel="noopener"><strong>Markdown notes</strong><span>Notes with tables and images next to your tasks, with version history.</span></a></li>
+            <li><a href="https://taskr.cc/features/workspaces" rel="noopener"><strong>Workspaces</strong><span>Separate boards for work, study and home, one click apart.</span></a></li>
+            <li><a href="https://taskr.cc/features/team-collaboration" rel="noopener"><strong>Shared workspaces</strong><span>Invite people as viewer, editor, moderator or owner on the Team plan.</span></a></li>
+            <li><a href="https://taskr.cc/features/rest-api-mcp" rel="noopener"><strong>API and MCP server</strong><span>A REST API, and an MCP server so AI assistants can read and update your tasks.</span></a></li>
+          </ul>
+          <p class="taskr-note">Taskr is free to start and also works on its own at <a class="text-link" href="https://taskr.cc" rel="noopener">taskr.cc</a>, on desktop and Android, and keeps your workspace readable offline.</p>
+        </div>
+
+        <article class="feature reverse" id="widgets">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Widgets &amp; backgrounds</span>
+            <h2>Clock, weather and a view you like</h2>
+            <p>The small things you glance at all day, done properly. Choose what's on the desktop and how it looks.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Clock and date</strong> in 12 or 24 hours, with a choice of date formats and time zones.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Weather</strong> for the city you pick, from the Norwegian Meteorological Institute.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Backgrounds</strong> from your computer, an image URL or Unsplash, with favourites to switch between.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Your accent colour</strong> across the whole interface, in light or dark mode.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>A focus timer too.</strong> Right-click the freeform desktop → <em>Add timer</em> for a pomodoro or countdown timer, with an optional sound and notification.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-left">
+            <div class="stack">
+              <div class="frame">
+                <img src="assets/screens/settings.webp" width="1400" height="1248" loading="lazy" decoding="async"
+                     alt="Deskr settings, Appearance tab, with a background image preview and favourite backgrounds">
+              </div>
+              <div class="frame">
+                <img src="assets/screens/widgets.webp" width="1200" height="517" loading="lazy" decoding="async"
+                     alt="Deskr clock and weather widgets showing 9 degrees in Bratislava above a large digital clock">
+              </div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Keyboard -->
+    <section class="section" id="keyboard" aria-labelledby="keyboard-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Keyboard shortcuts</span>
+          <h2 id="keyboard-title">Built for the keyboard</h2>
+          <p>Everything you do often has a shortcut, so the new tab gets you where you're going in a keystroke or two.</p>
+        </div>
+        <div class="keys">
+          <div class="key-card reveal"><div class="key-combo"><kbd>/</kbd> or <kbd>Ctrl</kbd>+<kbd>K</kbd></div><p><strong>Quick search</strong>Search shortcuts, folders, bookmarks and the web. Or just start typing.</p></div>
+          <div class="key-card reveal" style="--delay:70ms"><div class="key-combo"><kbd>/</kbd> then <kbd>1</kbd>–<kbd>9</kbd></div><p><strong>Your top nine</strong>Press <kbd>/</kbd> to see them numbered, then a number to open one. <kbd>Shift</kbd> opens it in a new tab.</p></div>
+          <div class="key-card reveal" style="--delay:140ms"><div class="key-combo"><kbd>dk</kbd>+<kbd>Space</kbd></div><p><strong>From the address bar</strong>Type <kbd>dk</kbd>, a space and a name to open any shortcut from any tab.</p></div>
+          <div class="key-card reveal"><div class="key-combo"><kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></div><p><strong>Add page to Deskr</strong>Save the page you're on as a shortcut.</p></div>
+          <div class="key-card reveal" style="--delay:70ms"><div class="key-combo"><kbd>Ctrl</kbd>+<kbd>Enter</kbd></div><p><strong>Open in a new tab</strong>Open the selected search result in the background.</p></div>
+          <div class="key-card reveal" style="--delay:140ms"><div class="key-combo"><kbd>↑</kbd><kbd>↓</kbd> <kbd>Esc</kbd></div><p><strong>Navigate results</strong>Move through results, and close search when you're done.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section class="section section-alt" id="privacy" aria-labelledby="privacy-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Privacy</span>
+          <h2 id="privacy-title">Your data stays with you</h2>
+          <p>Deskr has no account and no server. Your desktop is stored in Chrome and synced by Chrome Sync. Here's every permission it asks for, and every service it talks to.</p>
+        </div>
+        <div class="privacy-grid">
+          <div class="table-card reveal">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-lock"/></svg>Permissions and why</h3>
+            <table>
+              <thead><tr><th scope="col">Permission</th><th scope="col">Used for</th></tr></thead>
+              <tbody>
+                <tr><td>Bookmarks</td><td>Importing and searching your Chrome bookmarks</td></tr>
+                <tr><td>Storage</td><td>Saving and syncing shortcuts, feeds and settings</td></tr>
+                <tr><td>Alarms</td><td>Checking RSS feeds in the background</td></tr>
+                <tr><td>Search</td><td>Web search with your default engine</td></tr>
+                <tr><td>Context menus</td><td><em>Add page to Deskr</em> and <kbd>Alt</kbd>+<kbd>Shift</kbd>+<kbd>D</kbd></td></tr>
+                <tr><td>Identity</td><td>Signing in to Google Drive (images) and Taskr</td></tr>
+                <tr><td>Top sites</td><td>Optional: most visited sites, asked on first use</td></tr>
+                <tr><td>Site access</td><td>Optional: reading feeds and checking links, asked per site</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="table-card reveal" style="--delay:70ms">
+            <h3><svg class="icon" aria-hidden="true"><use href="#i-server"/></svg>Services it talks to</h3>
+            <table>
+              <thead><tr><th scope="col">Service</th><th scope="col">For</th></tr></thead>
+              <tbody>
+                <tr><td>Chrome Sync</td><td>Shortcuts, feeds, profiles and settings</td></tr>
+                <tr><td>Google Drive</td><td>Uploaded images, in a hidden app folder, only once connected</td></tr>
+                <tr><td>Google favicons</td><td>Site icons</td></tr>
+                <tr><td>jsDelivr</td><td>dashboard-icons and weather icons</td></tr>
+                <tr><td>MET Norway</td><td>The forecast, only with weather turned on</td></tr>
+                <tr><td>Open-Meteo</td><td>Finding your city for the weather</td></tr>
+                <tr><td>Unsplash</td><td>The background picker</td></tr>
+                <tr><td>Taskr</td><td>The Taskr tab, only once you sign in</td></tr>
+                <tr><td>Your feeds</td><td>RSS, fetched directly from each site</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Install -->
+    <section class="section" id="install" aria-labelledby="install-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Get started</span>
+          <h2 id="install-title">Set up in under a minute</h2>
+        </div>
+        <ol class="steps" style="list-style:none;margin:0;padding:0">
+          <li class="step reveal"><h3>Add Deskr to Chrome</h3><p>Install it from the Chrome Web Store with one click.</p></li>
+          <li class="step reveal" style="--delay:70ms"><h3>Open a new tab</h3><p>Deskr replaces the new tab page right away. Nothing to sign up for.</p></li>
+          <li class="step reveal" style="--delay:140ms"><h3>Make it yours</h3><p>Import your bookmarks, add feeds, pick a background and arrange the desktop.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-alt" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">FAQ</span>
+          <h2 id="faq-title">Frequently asked questions</h2>
+        </div>
+        <div class="faq reveal">
+          <details>
+            <summary>Do I need an account to use Deskr?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>No. Deskr has no account and no server of its own. Your shortcuts, feeds, profiles and settings are stored in Chrome and sync through Chrome Sync. A Taskr account is only needed if you want to use the Taskr tab.</p></div>
+          </details>
+          <details>
+            <summary>Does Deskr sync between my computers?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Yes. Shortcuts, folders, RSS feeds, profiles and settings sync through Chrome Sync to every computer where you're signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it.</p></div>
+          </details>
+          <details>
+            <summary>Can I import my Chrome bookmarks?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Yes. You can import single bookmarks or whole bookmark folders as shortcuts, and quick search also finds your Chrome bookmarks.</p></div>
+          </details>
+          <details>
+            <summary>Which feeds does the RSS reader support?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>RSS and Atom feeds, including YouTube channels and Twitch. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many new articles there are.</p></div>
+          </details>
+          <details>
+            <summary>Why does Deskr ask for permissions?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Each permission backs a feature: bookmarks for import and search, storage for saving and syncing, alarms for background feed checks, search for web search, context menus for <em>Add page to Deskr</em>, and identity for Google Drive and Taskr sign-in. Most visited sites and access to feed sites are optional and asked for only when you use them. See <a href="#privacy" style="color:var(--accent-foreground)">Privacy</a> for the full list.</p></div>
+          </details>
+          <details>
+            <summary>What is Taskr, and do I need it to use Deskr?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p><a class="text-link" href="https://taskr.cc" rel="noopener">Taskr</a> is our task manager with countdown timers on every deadline, drag-and-drop lists, recurring tasks, time tracking and notes. Deskr shows it in its own tab once you sign in or create a free account. It's optional: Deskr works fully without it, and you can turn the Taskr tab off in Settings.</p></div>
+          </details>
+          <details>
+            <summary>Does Deskr work in Edge, Brave or other Chromium browsers?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
+            <div class="faq-body"><p>Deskr is built for Google Chrome. Chromium-based browsers that install extensions from the Chrome Web Store can usually run it, but Chrome Sync is only available in Chrome.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" aria-labelledby="cta-title" style="padding-bottom:0">
+      <div class="container">
+        <div class="cta reveal">
+          <img src="assets/icon-128.png" alt="" width="64" height="64" loading="lazy">
+          <h2 id="cta-title">Make every new tab count</h2>
+          <p>Shortcuts, feeds, tasks and widgets on one calm, fast page. Ready when you open a tab.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe" rel="noopener">
+              <svg class="icon" aria-hidden="true"><use href="#i-chrome"/></svg>
+              Add to Chrome
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a class="brand" href="#top">
+          <img src="assets/icon-128.png" alt="" width="28" height="28" loading="lazy">
+          Deskr
+        </a>
+        <small>© 2026 Deskr. New tab desktop for Chrome.</small>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://taskr.cc" rel="noopener">Taskr</a>
+        <a href="https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe" rel="noopener">Chrome Web Store</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="main.js" defer></script>
+</body>
+</html>
