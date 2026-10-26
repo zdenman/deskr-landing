@@ -940,3 +940,4 @@ kbd, .kbd {
   .legal-summary { padding: 1.25rem; }
   .legal .table-card th, .legal .table-card td { padding: 0.75rem 1rem; }
 }
+.support-contact .btn { margin-top: 1.25rem; }
