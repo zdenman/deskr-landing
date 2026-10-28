@@ -77,7 +77,7 @@
         "applicationCategory": "BrowserApplication",
         "applicationSubCategory": "New tab page",
         "operatingSystem": "Chrome",
-        "softwareVersion": "0.6.0",
+        "softwareVersion": "0.14.1",
         "url": "https://deskr.cc/",
         "downloadUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
         "installUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
@@ -97,8 +97,13 @@
           "Top nine shortcuts opened with number keys",
           "Address bar keyword (dk) to open shortcuts from any tab",
           "RSS and Atom reader with YouTube and Twitch support",
+          "Feed discovery from a website's address",
+          "Read and unread articles with a toolbar badge",
+          "Saved articles that sync between computers",
+          "OPML import and export of feeds",
           "Taskr task manager in a tab: to-do lists, countdown deadlines, subtasks, calendar and time tracking",
           "Clock, date and weather widgets",
+          "Sticky notes with Markdown, checklists and code blocks",
           "Pomodoro and countdown timer",
           "Custom and Unsplash backgrounds",
           "Profiles",
@@ -118,7 +123,7 @@
           {
             "@type": "Question",
             "name": "Does Deskr sync between my computers?",
-            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shortcuts, folders, RSS feeds, profiles and settings sync through Chrome Sync to every computer where you are signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it." }
+            "acceptedAnswer": { "@type": "Answer", "text": "Yes. Shortcuts, folders, RSS feeds, saved articles, notes, profiles and settings sync through Chrome Sync to every computer where you are signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it." }
           },
           {
             "@type": "Question",
@@ -128,7 +133,7 @@
           {
             "@type": "Question",
             "name": "Which feeds does the RSS reader support?",
-            "acceptedAnswer": { "@type": "Answer", "text": "RSS and Atom feeds, including YouTube channels and Twitch. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many new articles there are." }
+            "acceptedAnswer": { "@type": "Answer", "text": "RSS and Atom feeds, including YouTube channels and Twitch. Type a website's address and Deskr finds its feed. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many unread articles there are. You can bring your feeds over from another reader, or take them with you, as an OPML file." }
           },
           {
             "@type": "Question",
@@ -211,7 +216,7 @@
     <section class="hero" id="top">
       <div class="hero-grid" aria-hidden="true"></div>
       <div class="container">
-        <span class="badge"><b>New</b> RSS categories and a redesigned reader</span>
+        <span class="badge"><b>New</b> Sticky notes, saved articles and OPML import</span>
         <h1>Your new tab, <span class="gradient-text">organized.</span></h1>
         <p class="hero-sub">Deskr turns Chrome's new tab page into a desktop for your shortcuts, RSS feeds, tasks and widgets. It syncs through Chrome Sync, with no account and no server.</p>
         <div class="hero-ctas">
@@ -283,7 +288,7 @@
           <article class="card span-2 reveal">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-rss"/></svg></div>
             <h3>RSS reader</h3>
-            <p>RSS and Atom feeds, YouTube channels and Twitch, sorted into categories and checked in the background.</p>
+            <p>RSS and Atom feeds, YouTube channels and Twitch, sorted into categories, with unread counts and articles saved for later.</p>
           </article>
           <article class="card span-2 reveal" style="--delay:70ms">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-tasks"/></svg></div>
@@ -292,8 +297,8 @@
           </article>
           <article class="card span-2 reveal" style="--delay:140ms">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></div>
-            <h3>Clock &amp; weather</h3>
-            <p>A clock and date in the format you like, and the forecast for your city from MET Norway.</p>
+            <h3>Widgets &amp; notes</h3>
+            <p>A clock, the forecast from MET Norway, a focus timer and sticky notes in Markdown, right on the desktop.</p>
           </article>
           <article class="card span-2 reveal">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
@@ -308,7 +313,7 @@
           <article class="card span-2 reveal" style="--delay:140ms">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-sync"/></svg></div>
             <h3>Synced everywhere</h3>
-            <p>Shortcuts, feeds, profiles and settings follow you to every computer through Chrome Sync.</p>
+            <p>Shortcuts, feeds, saved articles, notes, profiles and settings follow you to every computer through Chrome Sync.</p>
           </article>
         </div>
       </div>
@@ -394,10 +399,12 @@
             <h2>An RSS reader in every new tab</h2>
             <p>Follow blogs, news sites and creators without another app. Deskr fetches your feeds directly from their sites and shows new articles and videos the moment you open a tab.</p>
             <ul class="checklist">
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>RSS, Atom, YouTube and Twitch.</strong> Paste a site, feed or channel and you're done.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>RSS, Atom, YouTube and Twitch.</strong> Type a website's address and Deskr finds its feed, or paste a feed or channel.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Categories.</strong> Sort feeds into colour-coded categories and switch between them with one click.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Three views.</strong> A compact list, a list with images, or cards with the real video thumbnails.</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Background checks.</strong> Feeds refresh every 30 minutes and the toolbar icon shows how many new articles are waiting.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Read and unread.</strong> Unread articles stand out and the toolbar icon counts them. <em>Mark all as read</em> reaches your other computers too.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Save for later.</strong> Star an article to keep it in your <em>Saved</em> list, even after it drops out of its feed. Saved articles sync.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>OPML import and export.</strong> Bring your feeds over from another reader, with folders as categories, or take them with you.</span></li>
             </ul>
           </div>
           <div class="feature-media reveal from-left">
@@ -458,11 +465,12 @@
         <article class="feature reverse" id="widgets">
           <div class="feature-text reveal">
             <span class="eyebrow">Widgets &amp; backgrounds</span>
-            <h2>Clock, weather and a view you like</h2>
+            <h2>Clock, weather, notes and a view you like</h2>
             <p>The small things you glance at all day, done properly. Choose what's on the desktop and how it looks.</p>
             <ul class="checklist">
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Clock and date</strong> in 12 or 24 hours, with a choice of date formats and time zones.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Weather</strong> for the city you pick, from the Norwegian Meteorological Institute.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Sticky notes.</strong> Right-click the desktop → <em>Add note</em>. Write in light Markdown with checklists you tick right on the note and code blocks with a copy button; drag, resize and colour them, and they sync.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Backgrounds</strong> from your computer, an image URL or Unsplash, with favourites to switch between.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Your accent colour</strong> across the whole interface, in light or dark mode.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>A focus timer too.</strong> Right-click the freeform desktop → <em>Add timer</em> for a pomodoro or countdown timer, with an optional sound and notification.</span></li>
@@ -579,7 +587,7 @@
           </details>
           <details>
             <summary>Does Deskr sync between my computers?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-body"><p>Yes. Shortcuts, folders, RSS feeds, profiles and settings sync through Chrome Sync to every computer where you're signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it.</p></div>
+            <div class="faq-body"><p>Yes. Shortcuts, folders, RSS feeds, saved articles, notes, profiles and settings sync through Chrome Sync to every computer where you're signed in to Chrome. Uploaded icons and backgrounds can sync through a hidden Google Drive app folder once you connect it.</p></div>
           </details>
           <details>
             <summary>Can I import my Chrome bookmarks?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
@@ -587,7 +595,7 @@
           </details>
           <details>
             <summary>Which feeds does the RSS reader support?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
-            <div class="faq-body"><p>RSS and Atom feeds, including YouTube channels and Twitch. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many new articles there are.</p></div>
+            <div class="faq-body"><p>RSS and Atom feeds, including YouTube channels and Twitch. Type a website's address and Deskr finds its feed. Feeds are checked in the background every 30 minutes and the toolbar icon shows how many unread articles there are. You can bring your feeds over from another reader, or take them with you, as an OPML file (<em>Settings → RSS → Import &amp; Export</em>).</p></div>
           </details>
           <details>
             <summary>Why does Deskr ask for permissions?<svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg></summary>
