@@ -77,7 +77,7 @@
         "applicationCategory": "BrowserApplication",
         "applicationSubCategory": "New tab page",
         "operatingSystem": "Chrome",
-        "softwareVersion": "0.14.1",
+        "softwareVersion": "0.15.0",
         "url": "https://deskr.cc/",
         "downloadUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
         "installUrl": "https://chromewebstore.google.com/detail/efpgnpmeabljlfpkbjaldjlmclmilpoe",
@@ -103,6 +103,7 @@
           "OPML import and export of feeds",
           "Taskr task manager in a tab: to-do lists, countdown deadlines, subtasks, calendar and time tracking",
           "Clock, date and weather widgets",
+          "Calculator, currency converter, focus timer and sticky note widgets",
           "Sticky notes with Markdown, checklists and code blocks",
           "Pomodoro and countdown timer",
           "Custom and Unsplash backgrounds",
@@ -195,6 +196,7 @@
           <li><a href="#features">Features</a></li>
           <li><a href="#rss">RSS</a></li>
           <li><a href="#taskr">Taskr</a></li>
+          <li><a href="#widgets">Widgets</a></li>
           <li><a href="#privacy">Privacy</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
@@ -298,7 +300,7 @@
           <article class="card span-2 reveal" style="--delay:140ms">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-cloud"/></svg></div>
             <h3>Widgets &amp; notes</h3>
-            <p>A clock, the forecast from MET Norway, a focus timer and sticky notes in Markdown, right on the desktop.</p>
+            <p>A calculator, a currency converter, a focus timer and sticky notes in Markdown, plus a clock and the forecast from MET Norway.</p>
           </article>
           <article class="card span-2 reveal">
             <div class="card-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></div>
@@ -464,19 +466,44 @@
 
         <article class="feature reverse" id="widgets">
           <div class="feature-text reveal">
-            <span class="eyebrow">Widgets &amp; backgrounds</span>
-            <h2>Clock, weather, notes and a view you like</h2>
+            <span class="eyebrow">Widgets</span>
+            <h2>Small tools, right on your desktop</h2>
+            <p>Right-click an empty spot on the freeform desktop and pick a widget. Drag it anywhere by its top edge. Right-click it for its settings or to remove it. You can have as many as you like, and they sync with your profile.</p>
+            <ul class="checklist">
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Calculator.</strong> A full keypad with percentages and a history of your last ten sums. Click any number in the history to use it again. Click the widget and you can type on your keyboard too: <kbd>Enter</kbd> for the result, <kbd>Esc</kbd> to clear.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Currency converter.</strong> Type an amount and see it in all your currencies at once. Click a currency to convert from it. Rates update daily, and the last ones keep working offline.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Pick your currencies.</strong> The widget's settings list 21 currencies: the ones used in and around Europe, plus the US dollar. Tick the ones you use and only those show on the widget.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Focus timer.</strong> Pomodoro, countdown or stopwatch, with an optional sound and notification, even with no tab open.</span></li>
+              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Sticky notes.</strong> Write in light Markdown with checklists you tick right on the note and code blocks with a copy button; resize and colour them.</span></li>
+            </ul>
+          </div>
+          <div class="feature-media reveal from-left">
+            <div style="display:grid;gap:1.25rem">
+              <div class="frame">
+                <img src="assets/screens/widgets-desktop.webp" width="1600" height="888" loading="lazy" decoding="async"
+                     alt="Four Deskr widgets on the desktop: a calculator with a history of sums, a currency converter showing 100 euros in five currencies, a pomodoro timer and a yellow sticky note with a checklist">
+              </div>
+              <div class="frame">
+                <img src="assets/screens/currency-settings.webp" width="1080" height="800" loading="lazy" decoding="async"
+                     alt="The currency converter next to its settings panel, a list of currencies with checkboxes such as the Swedish krona and Serbian dinar">
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="feature" id="appearance">
+          <div class="feature-text reveal">
+            <span class="eyebrow">Clock &amp; backgrounds</span>
+            <h2>Clock, weather and a view you like</h2>
             <p>The small things you glance at all day, done properly. Choose what's on the desktop and how it looks.</p>
             <ul class="checklist">
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Clock and date</strong> in 12 or 24 hours, with a choice of date formats and time zones.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Weather</strong> for the city you pick, from the Norwegian Meteorological Institute.</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Sticky notes.</strong> Right-click the desktop → <em>Add note</em>. Write in light Markdown with checklists you tick right on the note and code blocks with a copy button; drag, resize and colour them, and they sync.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Backgrounds</strong> from your computer, an image URL or Unsplash, with favourites to switch between.</span></li>
               <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Your accent colour</strong> across the whole interface, in light or dark mode.</span></li>
-              <li><svg class="icon" aria-hidden="true"><use href="#i-check"/></svg><span><strong>A focus timer too.</strong> Right-click the freeform desktop → <em>Add timer</em> for a pomodoro or countdown timer, with an optional sound and notification.</span></li>
             </ul>
           </div>
-          <div class="feature-media reveal from-left">
+          <div class="feature-media reveal from-right">
             <div class="stack">
               <div class="frame">
                 <img src="assets/screens/settings.webp" width="1400" height="1248" loading="lazy" decoding="async"
