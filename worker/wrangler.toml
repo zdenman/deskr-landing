@@ -1,0 +1,12 @@
+name = "deskr-feedback"
+main = "src/index.js"
+compatibility_date = "2026-10-01"
+workers_dev = false
+
+# Only the survey endpoint; the rest of deskr.cc stays on Coolify
+routes = [{ pattern = "deskr.cc/api/uninstall-feedback", zone_name = "deskr.cc" }]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "deskr-feedback"
+database_id = "REPLACE_WITH_D1_ID"
