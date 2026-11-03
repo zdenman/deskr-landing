@@ -3,3 +3,6 @@ chrome-web-store/
 tools/
 .DS_Store
 Thumbs.db
+
+# feedback service dependencies
+feedback/node_modules/
